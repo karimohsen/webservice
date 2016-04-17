@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+<session-factory>
+    <property name="hibernate.connection.driver_class" >com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url" >jdbc:mysql://localhost/hibernatedb</property>
+    <property name="hibernate.connection.username" >root</property>
+    <property name="hibernate.connection.password" >root</property>
+    <property name="hibernate.dialect" >org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.max_allowed_packet">32*1024*1024</property>
+<mapping resource="hibernate\\UserData.hbm.xml"/>
+</session-factory>
+
+</hibernate-configuration>
